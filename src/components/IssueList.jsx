@@ -27,9 +27,11 @@ class IssueList extends React.Component {
         return (
             <div>
                 <h2>facebook/<b>create-react-app</b></h2>
-                <div class="container">
+                <div className="container">
                     <table>
-                        <tr class="border_bottom">
+                        <thead></thead>
+                        <tbody>
+                        <tr className="border_bottom">
                             <td><b>916 Open </b>✓ 6,177 Closed </td>
                         </tr>
                         {this.state.issues.map((issue, index) => {
@@ -43,6 +45,7 @@ class IssueList extends React.Component {
                                         body={issue.body}/>
                                 )
                             })}
+                        </tbody>
                     </table>
                 </div>
             </div>
